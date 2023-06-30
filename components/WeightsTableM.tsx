@@ -6,9 +6,9 @@ export default function WeightsTableM(): JSX.Element {
   const tableHead = ['LBS', 'KG']
   const tableData = [
     ['Einar', '1'],
-    ['Jona', '2'],
-    ['Brynja', '3'],
-    ['Thorey', '4']
+    ['Einar', '2'],
+    ['Einar', '3'],
+    ['Einar', '4']
   ]
 
   return (

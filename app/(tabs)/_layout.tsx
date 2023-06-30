@@ -3,6 +3,8 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { Link, Tabs } from 'expo-router';
 import { Pressable, useColorScheme } from 'react-native';
 
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import Colors from '../../constants/Colors';
 
 /**
@@ -17,7 +19,6 @@ function TabBarIcon(props: {
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
@@ -65,6 +66,6 @@ export default function TabLayout() {
           ),
         }}
       />
-    </Tabs>
+      </Tabs>
   );
 }

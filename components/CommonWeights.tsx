@@ -1,63 +1,55 @@
 import React from "react";
-import { StyleSheet, useColorScheme, Button } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { StyleSheet, useColorScheme } from "react-native";
+import { SimpleLineIcons } from '@expo/vector-icons';
+
 import Colors from "../constants/Colors";
 import { Text, View } from "./Themed";
 import WeightsTableM from "./WeightsTableM";
 import WeightsTableW from "./WeightsTableW";
 
-export default function CommonWeights() {
+// symbol-female - symbol-male
+function SexIcon(props: {
+  name: React.ComponentProps<typeof SimpleLineIcons>['name'];
+  children: string
+}) {
+  return <SimpleLineIcons size={28} style={{ marginBottom: -3 }} {...props} />;
+}
 
-  const Stack = createNativeStackNavigator();
+export default function CommonWeights() {
 
   const colorScheme = useColorScheme();
   return (
-    <View>
-      <View>
+      <View style={styles.mainContainer}>
         <Text
         style={styles.getStartedText}
         lightColor="rgba(0,0,0,0.8)"
         darkColor="rgba(255,255,255,0.8)">
-        Common weights used in crossfit
+        Common weights used in Crossfit
         </Text>
-        <Button
-          title="Female Weight"
-        />
-        <NavigationContainer independent={true}>
-          <Stack.Navigator initialRouteName="Male Weight">
-            <Stack.Screen
-              name="male-weight"
-              component={WeightsTableM}
-              options={{
-                title: "Male Weight"
-              }}
-            />
-            <Stack.Screen
-              name="female-weight"
-              component={WeightsTableW}
-              options={{
-                title: 'Female Weight'
-              }}
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
+        <View style={styles.buttonContainer}>
+
+        
+          
+        </View>
+        
+        
       </View>
-    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  getStartedContainer: {
-    alignItems: 'center',
-    marginHorizontal: 50,
+  mainContainer: {
+    display: 'flex',
+    flexDirection: 'column',
   },
   homeScreenFilename: {
     marginVertical: 7,
   },
-  codeHighlightContainer: {
-    borderRadius: 3,
-    paddingHorizontal: 4,
+  buttonContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   getStartedText: {
     fontSize: 17,

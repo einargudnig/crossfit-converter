@@ -5,7 +5,7 @@ import { Table, TableWrapper, Row, Cell } from "react-native-reanimated-table";
 export default function WeightsTableW(): JSX.Element {
   const tableHead = ['LBS', 'KG']
   const tableData = [
-    ['Einar', '1'],
+    ['Jona', '1'],
     ['Jona', '2'],
     ['Brynja', '3'],
     ['Thorey', '4']
