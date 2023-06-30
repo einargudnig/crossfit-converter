@@ -29,7 +29,7 @@ export default function TabLayout() {
           title: 'Weight',
           tabBarIcon: ({ color }) => <TabBarIcon name="weight" color={color} />,
           headerRight: () => (
-            <Link href="/modal" asChild>
+            <Link href="/weights-modal" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
@@ -49,6 +49,20 @@ export default function TabLayout() {
         options={{
           title: 'Distance',
           tabBarIcon: ({ color }) => <TabBarIcon name="tape-measure" color={color} />,
+          headerRight: () => (
+            <Link href="/distance-modal" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <FontAwesome
+                    name="info-circle"
+                    size={25}
+                    color={Colors[colorScheme ?? 'light'].text}
+                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                  />
+                )}
+              </Pressable>
+            </Link>
+          ),
         }}
       />
     </Tabs>
