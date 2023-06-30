@@ -1,23 +1,47 @@
 import React from "react";
-import { StyleSheet } from "react-native";
-
+import { StyleSheet, useColorScheme, Button } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Colors from "../constants/Colors";
-import { ExternalLink } from "./ExternalLink";
-import { MonoText } from "./StyledText";
 import { Text, View } from "./Themed";
-import WeightsTable from "./WeightsTable";
+import WeightsTableM from "./WeightsTableM";
+import WeightsTableW from "./WeightsTableW";
 
-export default function CommoonWeights() {
+export default function CommonWeights() {
+
+  const Stack = createNativeStackNavigator();
+
+  const colorScheme = useColorScheme();
   return (
     <View>
-      <View style={styles.getStartedContainer}>
+      <View>
         <Text
-          style={styles.getStartedText}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
-          Common weights used in crossfit
+        style={styles.getStartedText}
+        lightColor="rgba(0,0,0,0.8)"
+        darkColor="rgba(255,255,255,0.8)">
+        Common weights used in crossfit
         </Text>
-        <WeightsTable />
+        <Button
+          title="Female Weight"
+        />
+        <NavigationContainer independent={true}>
+          <Stack.Navigator initialRouteName="Male Weight">
+            <Stack.Screen
+              name="male-weight"
+              component={WeightsTableM}
+              options={{
+                title: "Male Weight"
+              }}
+            />
+            <Stack.Screen
+              name="female-weight"
+              component={WeightsTableW}
+              options={{
+                title: 'Female Weight'
+              }}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
       </View>
     </View>
   );

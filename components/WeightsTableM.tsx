@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { Table, TableWrapper, Row, Cell } from "react-native-reanimated-table";
 
-const WeightsTable: React.FC = () => {
+export default function WeightsTableM(): JSX.Element {
   const tableHead = ['LBS', 'KG']
   const tableData = [
     ['Einar', '1'],
@@ -36,5 +36,3 @@ const styles = StyleSheet.create({
   rowText: { margin: 6 },
   border: { borderWidth: 1, borderColor: '#c8e1ff' },
 })
-
-export default WeightsTable;

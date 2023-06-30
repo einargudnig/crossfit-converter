@@ -29,7 +29,7 @@ export default function TabLayout() {
           title: 'Weight',
           tabBarIcon: ({ color }) => <TabBarIcon name="weight" color={color} />,
           headerRight: () => (
-            <Link href="/weights-modal" asChild>
+            <Link href="/modal" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
@@ -50,7 +50,7 @@ export default function TabLayout() {
           title: 'Distance',
           tabBarIcon: ({ color }) => <TabBarIcon name="tape-measure" color={color} />,
           headerRight: () => (
-            <Link href="/distance-modal" asChild>
+            <Link href="/modal" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
