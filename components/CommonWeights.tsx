@@ -4,8 +4,6 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 
 import Colors from "../constants/Colors";
 import { Text, View } from "./Themed";
-import WeightsTableM from "./WeightsTableM";
-import WeightsTableW from "./WeightsTableW";
 
 // symbol-female - symbol-male
 function SexIcon(props: {

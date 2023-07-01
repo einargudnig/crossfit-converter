@@ -9,7 +9,7 @@ export default function TabOneScreen() {
     <View style={styles.mainContainer}>
       <Text style={styles.title}>Choose common weights or convert</Text>
       <View style={styles.buttonContainer}>
-        <Link href="/two" asChild>
+        <Link href="/male-weights" asChild>
           <Pressable>
             {({ pressed }) => (
               <Text style={styles.button}>
@@ -18,7 +18,7 @@ export default function TabOneScreen() {
             )}
           </Pressable>
         </Link>
-        <Link href="/two" asChild>
+        <Link href="/female-weight" asChild>
           <Pressable>
             {({ pressed }) => (
               <Text style={styles.button}>
@@ -27,7 +27,7 @@ export default function TabOneScreen() {
             )}
           </Pressable>
         </Link>
-        <Link href="/two" asChild>
+        <Link href="/converter" asChild>
           <Pressable>
             {({ pressed }) => (
               <Text style={styles.button}>

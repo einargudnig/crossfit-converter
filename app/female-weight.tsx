@@ -3,24 +3,24 @@ import { StyleSheet } from "react-native";
 import { Text, View } from '../components/Themed';
 import { Table, TableWrapper, Row, Cell } from "react-native-reanimated-table";
 
-export default function WeightsTableM(): JSX.Element {
+export default function WeightsTableF(): JSX.Element {
   const tableHead = ['LBS', 'KG']
   const tableData = [
+    ['35', '15'],
     ['45', '20'],
-    ['50', '22.5'],
-    ['70', '32.5'],
+    ['65', '30'],
+    ['85', '38'],
     ['95', '43'],
+    ['105', '47'],
     ['115', '52'],
+    ['125', '57'],
     ['135', '61'],
-    ['155', '70'],
+    ['145', '66'],
+    ['165', '75'],
     ['185', '84'],
     ['205', '93'],
     ['225', '102'],
     ['245', '111'],
-    ['265', '120'],
-    ['285', '129'],
-    ['305', '138'],
-    ['325', '147'],   
   ]
 
   return (
