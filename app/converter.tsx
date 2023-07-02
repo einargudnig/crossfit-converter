@@ -23,7 +23,7 @@ export default function Converter(): JSX.Element {
       <Text style={styles.title}>Weight Conversion</Text>
       
       <View style={styles.button}>
-        <FontAwesome.Button name='exchange' backgroundColor='white' onPress={() => setUnit(unit === 'lbs' ? 'kg' : 'lbs')}>
+        <FontAwesome.Button name='exchange' backgroundColor='black' onPress={() => setUnit(unit === 'lbs' ? 'kg' : 'lbs')}>
           <Text style={styles.conversionButton}>{unit === 'lbs' ? 'LBS -> KG' : 'KG -> LBS'}</Text>
         </FontAwesome.Button>
       </View>
@@ -39,7 +39,7 @@ export default function Converter(): JSX.Element {
       </View>
       {convertedValue !== '' && (
         <View style={styles.convertedValue}>
-          <Text>
+          <Text style={styles.convertedText}>
             Converted Value: {convertedValue} {unit === 'lbs' ? 'KG' : 'LBS'}
           </Text>
         </View>
@@ -78,13 +78,18 @@ const styles = StyleSheet.create({
   },
   button: {
     justifyContent: 'center',
-    alignItems: 'center'  
+    alignItems: 'center'  ,
+    borderWidth: 1,
+    borderColor: 'white',
+    borderRadius: 6,
   },
   conversionButton: {
-    color: 'black',
+    color: 'white',
   },
   convertedValue: {
     marginTop: 20,
+  },
+  convertedText: {
+    fontSize: 24,
   }
-
 })
