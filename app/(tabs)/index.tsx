@@ -1,13 +1,13 @@
 import { StyleSheet, Pressable } from 'react-native';
 import { Link } from "expo-router";
-import CommonWeights from '../../components/CommonWeights';
-import ConverterWeights from '../../components/ConverterWeights';
 import { Text, View } from '../../components/Themed';
 
 export default function TabOneScreen() {
   return (
-    <View style={styles.mainContainer}>
+    <View style={styles.container}>
+    
       <Text style={styles.title}>Choose common weights or convert</Text>
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <View style={styles.buttonContainer}>
         <Link href="/male-weights" asChild>
           <Pressable>
@@ -37,11 +37,17 @@ export default function TabOneScreen() {
           </Pressable>
         </Link>
         </View>
-    </View>
+      
+      </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   mainContainer: {
     display: 'flex',
     flexDirection: 'column',
