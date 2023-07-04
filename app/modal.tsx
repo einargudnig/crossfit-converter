@@ -10,11 +10,11 @@ export default function WeightModalScreen() {
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Text style={styles.text}>In the table you can see common weights used in workout</Text>
       <Text style={styles.text}>Note that the weights are rounded to easier numbers.</Text>
+      <Text style={styles.text}>You can also convert the weight you have in your workout in this converter!</Text>
 
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Text style={styles.title}>Distance</Text>
       <Text style={styles.text}>You can convert the distance you have in your workout in this converter!</Text>
-      <Text style={styles.text}>Note that the weights are rounded to easier numbers.</Text>
       {/* Use a light status bar on iOS to account for the black space above the modal */}
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
     </View>
