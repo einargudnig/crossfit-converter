@@ -17,6 +17,9 @@ function TabBarIcon(props: {
   return <MaterialCommunityIcons size={28} style={{ marginBottom: -3 }} {...props} />;
 }
 
+
+// Can I add more tabs here to get more tabs in the bottom bar?
+// I might want to add a new tab for more conversions
 export default function TabLayout() {
   const colorScheme = useColorScheme();
   return (
